@@ -13,6 +13,4 @@ This page is informational only. It does not contain API tokens, client secrets,
 ## Shopify App URL
 
 Use the GitHub Pages URL as the Shopify App URL:
-
-```text
-https://github.com/simeo2/mh-n8n-automator-app-home.git
+- https://simeo2.github.io/mh-n8n-automator-app-home/
