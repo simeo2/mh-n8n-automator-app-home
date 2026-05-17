@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <title>n8n AutoMator</title>
+
+  <style>
+    :root {
+      --bg: #f6f6f7;
+      --card: #ffffff;
+      --text: #202223;
+      --muted: #6d7175;
+      --border: #dfe3e8;
+      --green: #108043;
+      --green-soft: #e3f1df;
+      --blue-soft: #eaf3ff;
+      --blue-text: #174ea6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .app-shell {
+      width: 100%;
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 34px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .logo {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #108043, #008060);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      flex: 0 0 auto;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 24px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .description {
+      max-width: 760px;
+      margin: 0 0 28px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .info-box {
+      background: #fbfbfc;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 18px;
+    }
+
+    .info-box h2 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .info-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .note {
+      margin-top: 28px;
+      padding: 16px 18px;
+      border-radius: 15px;
+      background: var(--blue-soft);
+      color: var(--blue-text);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .footer {
+      margin-top: 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    code {
+      display: inline-block;
+      background: #f1f2f4;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 2px 7px;
+      color: #202223;
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .app-shell {
+        padding: 26px 14px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .header {
+        align-items: flex-start;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="app-shell">
+    <section class="card" aria-label="n8n AutoMator app information">
+      <div class="header">
+        <div class="logo" aria-hidden="true">n8n</div>
+        <div>
+          <h1>n8n AutoMator</h1>
+          <p class="subtitle">Private automation bridge for Madeleine’s Haus</p>
+        </div>
+      </div>
+
+      <div class="status" aria-label="Connection status">
+        <span class="status-dot" aria-hidden="true"></span>
+        Connected
+      </div>
+
+      <p class="description">
+        This private app connects Madeleine’s Haus Shopify with n8n for blog publishing
+        and image automation. It allows approved automation workflows to upload images,
+        create blog posts, and publish content through the Shopify Admin API.
+      </p>
+
+      <div class="grid">
+        <div class="info-box">
+          <h2>Blog Publishing</h2>
+          <p>Create and publish Shopify blog articles from approved n8n workflows.</p>
+        </div>
+
+        <div class="info-box">
+          <h2>Image Automation</h2>
+          <p>Attach generated or uploaded images to Shopify blog content.</p>
+        </div>
+
+        <div class="info-box">
+          <h2>API Managed</h2>
+          <p>No manual configuration is required inside Shopify Admin.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        Automation is managed securely from n8n. This page is informational only and does
+        not expose tokens, secrets, OAuth codes, or workflow settings.
+      </div>
+
+      <p class="footer">
+        Store connection: <code>lidocaine10-com.myshopify.com</code>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
